@@ -1,7 +1,7 @@
 module "vpc" {
-    source = "../terraform-aws-vpc"     #if working in local we can give module location path
-    #source = "git::https://github.com/saipavan4572/terraform-aws-vpc?ref=main"
-    # source we can give the git repo location with branch - default it will take main branch
+    #source = "../terraform-aws-vpc"     #if working in local we can give module location path
+    source = "git::https://github.com/saipavan4572/terraform-aws-vpc?ref=main"
+    # source we can give the git repo location with branch reference - default it will take "main" branch
     project_name = var.project_name
     common_tags = var.common_tags
     public_subnet_cidrs = var.public_subnet_cidrs
